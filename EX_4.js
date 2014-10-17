@@ -14,11 +14,24 @@ var cat = {
             this.tiredness -= 10;
             this.happiness += 5;
         },
-        pet: function(){
-            console.log("Prrrrrrr");
-            this.happiness +=5;
-            this.tiredness += 5;
-            this.lonliness -= 1;
+        activity: function(action){
+            if (action === "pet")
+            {
+                console.log("Prrrrrrr");
+                this.happiness +=5;
+                this.tiredness += 5;
+                this.lonliness -= 1;
+                this.obedientness += 300;
+            }
+            else
+            {
+                console.log("LAZERSSSSS");
+                this.happiness += 10;
+                this.tiredness -= 10;
+                this.lonliness -= 1;
+                this.obedientness -= 500;
+            }
+            
         },
         status: function(){
             console.log("Tiredness: ", this.tiredness);
@@ -32,5 +45,6 @@ var cat = {
 cat.status();
 cat.feed();
 cat.sleep();
-cat.pet();
+cat.activity("pet");
+cat.activity("laser");
 cat.status();
