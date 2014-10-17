@@ -41,8 +41,10 @@ function count_items(obj_types)
 // determine which array items appear more than once in the array
 function find_duplicates(obj_types)
 {
+    // create empty array to hold items that appear more than once
     var dup_array = [];
 
+    // loop through each object type key, and add duplicates to dup_array
     for (var obj_type_key in obj_types) 
     {
         if (!obj_types.hasOwnProperty(obj_type_key)) 
@@ -51,7 +53,7 @@ function find_duplicates(obj_types)
             continue;
         }
 
-        // create variable to hold the objects for each object_type_key
+        // create object to hold the objects for each object_type_key
         var obj_counts = obj_types[obj_type_key];
 
         // create key array from obj_counts key (key is original array item)
@@ -73,7 +75,7 @@ function find_duplicates(obj_types)
 // find and return a list of duplicate array items
 function is_duplicate(my_array)
 {
-    var len = my_array.length;
+    // Create an object where key = types, value = list of items
     var obj_types = {"boolean": [],
                  "number": [],
                  "string": [],
@@ -83,9 +85,11 @@ function is_duplicate(my_array)
                  "undefined": []
                 };
 
+    // create empty object where key = item, value = occurrences in array
     var obj_count = {};
 
     // Create an object of objects from array items
+    var len = my_array.length;
     for (var i = 0; i < len; i++)
     {
         // add array items to obj_types object based on type
