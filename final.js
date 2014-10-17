@@ -1,14 +1,14 @@
 
-var getText = document.getElementById("get-text");
-getText.addEventListener("click", function(e)
+var text = document.getElementById("get-text");
+text.addEventListener("click", function(e)
 {
     e.preventDefault();
     var textBox = document.getElementById("text-box-replace");
     textBox.innerHTML = "world";
 });
 
-var getColor = document.getElementById("get-color");
-getColor.addEventListener("click", function(e)
+var color = document.getElementById("get-color");
+color.addEventListener("click", function(e)
 {
     e.preventDefault();
     var textBox = document.getElementById("text-box-color");
@@ -17,8 +17,8 @@ getColor.addEventListener("click", function(e)
 
 });
 
-var getMelon = document.getElementById("get-melon");
-getMelon.addEventListener("click", function(e)
+var melon = document.getElementById("get-melon");
+melon.addEventListener("click", function(e)
 {
     e.preventDefault();
     var melonPic = document.getElementById("melon-pic");
@@ -58,7 +58,7 @@ beAwesome.addEventListener("click", function(e)
     setTimeout(function()
     {
         clearInterval(interval);
-    }, 10000);
+    }, 9000);
 });
 
 
